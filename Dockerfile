@@ -24,6 +24,7 @@ RUN pacman -Syu --noconfirm \
 
 # Kopiér kun curl-impersonate binaries fra builder
 COPY --from=builder /usr/bin/curl* /usr/bin/
+COPY --from=builder /usr/lib/libcurl-impersonate* /usr/lib/
 
 WORKDIR /app
 COPY app.py mondaymandala.sh setup-printer.sh ./

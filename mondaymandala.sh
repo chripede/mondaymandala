@@ -18,7 +18,7 @@ cleanup() {
 trap cleanup EXIT
 
 # Download PDF via curl-impersonate
-curl_firefox147 -s -L \
+curl-impersonate -s -L \
   -H "Accept: application/pdf,application/octet-stream" \
   -H "Referer: https://mondaymandala.com/" \
   -o "$TMPPDF" "$URL"
