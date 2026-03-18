@@ -1,0 +1,9 @@
+services:
+  mondaymandala:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - PRINTER_URI=ipp://printername.localdomain/ipp/print  # Ret til din printers IPP-adresse
+      - FLASK_APP=app.py
+    restart: unless-stopped
